@@ -1,0 +1,24 @@
+{
+    "name": "parthvora777/simplemessage",
+    "description": "A simple Laravel package to show a message on the page",
+    "authors": [
+        {
+            "name": "Parth Vora",
+            "email": "parth.vora.777@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ParthVora777\\SimpleMessage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ParthVora777\\SimpleMessage\\SimpleMessageServiceProvider"
+            ]
+        }
+    }
+}
