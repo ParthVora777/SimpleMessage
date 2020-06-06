@@ -25,7 +25,7 @@ class SimpleMessageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $installedJsonFile = './../composer/installed.json';
+        $installedJsonFile = base_path('/vendor/composer/installed.json');
         if (file_exists($installedJsonFile)) {
             $installedPackages = json_decode(file_get_contents($installedJsonFile));
             foreach ($installedPackages as $installedPackage) {
