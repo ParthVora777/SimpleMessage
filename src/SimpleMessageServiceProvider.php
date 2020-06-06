@@ -30,7 +30,15 @@ class SimpleMessageServiceProvider extends ServiceProvider
             $installedPackages = json_decode(file_get_contents($installedJsonFile));
             foreach ($installedPackages as $installedPackage) {
                 if (isset($installedPackage->name) && $installedPackage->name === self::PACKAGE_NAME) {
-                    echo 'A simple message from ' . self::PACKAGE_NAME . ' ' . $installedPackage->version;
+                    $simplemessage = '<div style="text-align: center;
+                            background: lightgrey;
+                            font-weight: bold;
+                            padding: 10px;
+                            border: dotted;">' .
+                    'A simple message from ' . self::PACKAGE_NAME . ' ' . $installedPackage->version .
+                        '</div>';
+
+                    echo $simplemessage;
                 }
             }
         }
